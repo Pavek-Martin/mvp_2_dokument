@@ -34,12 +34,12 @@ REM --speed=1 je default ( bude prehravat normalni rychlosti )
 REM set d="0.5"
 
 
-REM set o=0
+set o=0
 REM       ^ prehraje usek A-B 1x vlastene totez jako by bylo pouze "--start=" "--end="
 
 REM set o=1
 REM       ^ prehraje usek A-B 2x
-set o=999
+REM set o=999
 REM prehraje usek A-B 2x ( vzdycky o jednu min se musi davat )
 
 set popis=zde popis sceny cislo 1
@@ -57,7 +57,7 @@ REM pouze "--start=" "--end=" pro prehrani urciteho useku, paklize by tam "--ab-
 REM nebyl vubec tak bude prehravat usek "--ab-loop-a=" "--ab-loop-b=" do nekonecna
 REM set o="" hazi chybu, ocekava hodnotu parametru kerej by tam v tomhle pripade ale
 REM zase nemel bejt, to by pak zese ale uz nebyl univerzalni radek 
-REM takze pro "nekonecny" prehravani zadet treba set o=999
+REM takze pro "nekonecny" prehravani zadat treba set o=999
 
 sleep 2
 

@@ -38,7 +38,7 @@ echo snazil jsem se vytahnou vsechny sceny ze Strahova, plus neco malo je umysln
 echo -----------------------------------------------------------------------------------
 echo klavesa f = prepinani okno/fullscreen
 echo klavesa q = preskoceni jedny polozky (jednoho useku )
-echo ukonceni = napred klavesa f a potom zavreni okna terminalu v pravo nahore
+echo ukonceni = napred klavesa f a potom zavreni okna terminalu vpravo nahore
 echo a nebo 2x rychle za sebou kombinace Alt+F4
 echo jeste klavesa mezera = video pause/unpause
 REM sleep 10

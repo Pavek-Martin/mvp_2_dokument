@@ -76,6 +76,7 @@ set sodc="#00A2E8"
 REM barva osd ( de se zjistit v programu malovani )
 
 REM goto aaa
+REM goto bbb
 
 set osdm=--window-scale=%l%
 echo %osdm%
@@ -98,7 +99,7 @@ echo rok 1976
 
 
 set osd=2
-set osdf="30"
+set osdf="20"
 set l="2"
 REM pred scenou cislo 2, nastavy velikost okna prehravani na dvojnasobek velikosti normalni default Windows okna
 REM "default Windows okno" bude asi nekde v systemu nejake hodnota pro beznou velikost okna
@@ -109,13 +110,22 @@ echo bude prehravat v 2x default oknu
 echo --window-scale=%l%
 %mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=%m% --speed=1 --start=00:06:24.300 --end=00:06:37 %filename%
 
+:bbb
+
+set s1="00:06:41.000"
+set e1="00:06:43.300" 
+set osdm="%s1% - %e1%"
+REM         ^^ musi bejt takle jinak to blbne
+REM cas useku A-B vlozi do "--osd-playing-msg="
 echo scena - 3
 echo 3x a-b slalom, barevne u nafukovaci haly Strahov
-%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=0.33 --start=00:06:41.000 --ab-loop-count=2 --ab-loop-a=00:06:41.000 --ab-loop-b=00:06:43.300 --end=00:06:43.300 %filename%
+echo %osdm%
+%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=0.33 --start=%s1% --ab-loop-count=2 --ab-loop-a=%s1% --ab-loop-b=%e1% --end=%e1% %filename%
 REM --ab-loop-a=00:06:41.000 --ab-loop-b=00:06:43.300 --end=00:06:43.300 prehraje 3x usek A-B a skonci na --end=
 REM tzn. na konci tretiho zopakovani a nemusi bejt treba ani --end=00:06:43.301 ( b= & end= muze bejt uplne stejny )
 REM a zadnej bordel to pritom nedela jak by se dalo cekat takze staci jedna promenna na b= & end= (%be%
 
+set osdm=""
 echo scena - 4
 %mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=0.33 --start=00:11:15.000 --end=00:11:17.000 %filename%
 
