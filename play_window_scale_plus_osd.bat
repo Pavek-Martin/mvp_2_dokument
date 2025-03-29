@@ -308,6 +308,8 @@ echo scena - 36
 echo hodi se na konec
 %mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=0.5 --start=01:19:00.500 --end=01:19:03.000 %filename%
 
+REM 28.3.2025 - novej poznatek - window-scale=1.5 napr. lze taky pouzit apod.
+
 echo "konec"
 pause
 @echo on
