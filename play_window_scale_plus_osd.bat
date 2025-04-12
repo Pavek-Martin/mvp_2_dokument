@@ -268,7 +268,8 @@ set osd="1"
 set osdf="90"
 set sodc="#FF7F27"
 set osdm="scena ze nakej milovnik"
-%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=1 --start=00:56:58.000 --end=00:57:02.500 %filename%
+set du="3600000" & REM bude zobrazovat stale ( maximalni hodnota )
+%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --osd-playing-msg-duration=%du% --window-scale=%l% --mute=yes --speed=1 --start=00:56:58.000 --end=00:57:02.500 %filename%
 
 set osd="2"
 set osdf="30"
@@ -286,7 +287,7 @@ set osdm="uplne krasojezdkyne"
 echo scena - 32
 echo holka 3x a-b
 echo dreveny spulky na kabely pamatuju a ta ctverckovana zed je my povedoma
-%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --window-scale=%l% --mute=yes --speed=0.5 --start=00:58:35.900 --ab-loop-count=2 --ab-loop-a=00:58:35.900 --ab-loop-b=00:58:40.800 --end=00:58:40.800 %filename%
+%mpvpl% --fullscreen=no --osd-level=%osd% --osd-font-size=%osdf% --osd-color=%sodc% --osd-playing-msg=%osdm% --osd-playing-msg-duration=%du% --window-scale=%l% --mute=yes --speed=0.5 --start=00:58:35.900 --ab-loop-count=2 --ab-loop-a=00:58:35.900 --ab-loop-b=00:58:40.800 --end=00:58:40.800 %filename%
 
 set osd="2"
 set osdf="30"
